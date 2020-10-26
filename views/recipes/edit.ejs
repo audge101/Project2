@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+        <h1>Edit Recipe Page</h1>
+        <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
+    		Recipe Title: <input type="text" name="title" value="<%=recipe.title%>"/><br/>
+            Image URL: <input type="text" name="image1" value="<%=recipe.img1%>"/><br/>
+            Image URL: <input type="text" name="image2" value="<%=recipe.img2%>"/><br/>
+            Image URL: <input type="text" name="image3" value="<%=recipe.img3%>"/><br/>
+            Link URL: <input type="text" name="link1" value="<%=recipe.link1%>"/><br/>
+            Link URL: <input type="text" name="link2" value="<%=recipe.link2%>"/><br/>
+            Entry: <input type="text" name="recipeEntry" value="<%=recipe.entry%>"/><br/>
+            <input type="checkbox" name="healthGoals"
+                <% if(recipe.healthGoals === true){ %>
+                    checked
+                <% } %>
+            />
+            <br/>
+            <input type="checkbox" name="submitPublicFeed"
+                <% if(recipe.submitPublicFeed === true){ %>
+                    checked
+                <% } %>
+            />
+            <br/>
+            <input type="submit" name="" value="Submit Changes"/>
+        </form>
+
+<%- include('../partials/footer.ejs') %>
+
+

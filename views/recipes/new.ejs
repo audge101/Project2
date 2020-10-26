@@ -1,0 +1,20 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+        <h1>New Recipe page</h1>
+        <form action="/recipes" method="POST">
+            Recipe Title: <input type="text" name="title" /><br/>
+            Image URL: <input type="text" name="img1" /><br/>
+            Image URL: <input type="text" name="img2" /><br/>
+            Image URL: <input type="text" name="img3" /><br/>
+            Link URL: <input type="text" name="link1" /><br/>
+            Link URL: <input type="text" name="link2" /><br/>
+            Entry: <input type="text" name="recipeEntry" /><br/>
+            This recipe was in line with my health goals: <input type="checkbox" name="healthGoals" /><br/>
+            I'd like to submit this to the public feed: <input type="checkbox" name="submitPublicFeed" /><br/>
+            <input type="submit" name="" value="Create Recipe"/>
+        </form>
+
+<%- include('../partials/footer.ejs') %>
+
+
