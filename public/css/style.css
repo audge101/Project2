@@ -131,9 +131,13 @@ video {
 	object-fit: cover;
 }
 
-label {
-	color: #3d4849;
+label, .showCard {
+	color: #292b2c ;
 	text-align: left;
+}
+
+input {
+	font: ariel;
 }
 
 #eec8b5, #c6d2c8

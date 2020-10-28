@@ -15,9 +15,9 @@
                 <li class="list-group-item"><a href="<%=recipe.link1; %>"><%=recipe.link1; %></a></li>
                 <li class="list-group-item"><a href="<%=recipe.link2; %>"><%=recipe.link2; %></a></li>
               </ul>
-            <div class="card-body">
+            <div class="card-body text-dark showCard">
                 <h4 class="card-title"><%=recipe.title; %></h4>
-                <p class="card-text"><%=recipe.recipeEntry; %></p>
+                <p class="card-text showCard"><%=recipe.recipeEntry; %></p>
                 <% if(recipe.healthGoals === true){ %>
                 <div>
                     This meal was in line with your health goals!
