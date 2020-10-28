@@ -109,8 +109,13 @@ video {
 .indexCard {
 	text-align: center;
 	width: 18rem;
-	max-height: 30rem; 
+	max-height: 20rem; 
 
+}
+
+.indexImage {
+	width: 18 rem;
+	max-height: 20rem;
 }
 
 .indexLinks:hover > a {

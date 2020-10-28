@@ -9,9 +9,9 @@
 				<div
 					<div class="card-deck">
 		            <% for(let i = 0; i < recipes.length; i++){ %>
-							<div class="card indexCard">
-								<img src="<%=recipes[i].img1; %>" class="card-img-top" alt="...">
-								<div class="card-body">
+							<div class="card">
+								<img src="<%=recipes[i].img1; %>" class="card-img-top indexImage" alt="...">
+								<div class="card-body indexCard">
 							    <a href="/recipes/<%=recipes[i].id; %>"><h5 class="card-title" text-align="center">
 							        <%=recipes[i].title; %>
 							        </h5>
