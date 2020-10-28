@@ -1,33 +1,37 @@
 <%- include('../partials/header.ejs') %>
 <%- include('../partials/nav.ejs') %>
 
-		<h1>Recipes Index Page</h1>
-		 <nav>
-		    <a href="/recipes/new">Create a New Recipe</a>
-		</nav>
+		<h1>Recipes</h1>
+		 	<nav>
+		    	<a href="/recipes/new">Create a New Recipe</a>
+			</nav>
+			
+				
+					<div class="card-deck">
+		            <% for(let i = 0; i < recipes.length; i++){ %>
+							<div class="card indexCard" style="width: 25rem">
+								<img src="<%=recipes[i].img1; %>" class="card-img-top" alt="...">
+								<div class="card-body">
+							    <a href="/recipes/<%=recipes[i].id; %>"><h5 class="card-title" text-align="center">
+							        <%=recipes[i].title; %>
+							        </h5>
+							    </a>
+							    <p class="card-text">
+							    	<div class="indexButtons">
+								    <form action="/recipes/<%=recipes[i].id; %>?_method=DELETE" method="POST">
+								        <input type="submit" class="btn btn-outline-secondary" value="DELETE"/>
+								    </form>
 
+								    <button type="submit" class="btn btn-outline-secondary indexLinks" style=" margin-top: 6px"><a href="/recipes/<%=recipes[i].id; %>/edit" class="indexEditLinks">Edit</a></button>
+								    </div>
+							    </p>
+							  	</div>
+							</div>
 
-            <% for(let i = 0; i < recipes.length; i++){ %>
-					<div class="card" style="width: 20rem;">
-						<img src="<%=recipes[i].img1; %>" class="card-img-top" alt="...">
-						<div class="card-body">
-					    <a href="/recipes/<%=recipes[i].id; %>"><h5 class="card-title" text-align="center">
-					        <%=recipes[i].title; %>
-					        </h5>
-					    </a>
-					    <p class="card-text">
-						    <form action="/recipes/<%=recipes[i].id; %>?_method=DELETE" method="POST">
-						        <input type="submit" value="DELETE"/>
-						    </form>
-						    <a href="/recipes/<%=recipes[i].id; %>/edit">Edit</a>
-					    </p>
-					  	</div>
-					</div>
-
-            <% } %>
-   
-       
-
+		            <% } %>
+		            </div>
+   				
 <%- include('../partials/footer.ejs') %>
+
 
 

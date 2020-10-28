@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand">Recipe App</a>
+  <a class="navbar-brand">Tasti App</a>
   <a class="navbar-sm"><% if (currentUser) { %>
     Welcome back <%= currentUser.username %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,8 +23,7 @@
       </form>
 
     <% } else { %>
-      <button type="button" name="button" class="btn btn-outline-success my-2 my-sm-0"><a href="/users/new">Sign Up</a></button>
-      <button type="button" name="button" class="btn btn-outline-success my-2 my-sm-0"><a href="/sessions/new">Log In</a></button>
+      <button type="button" name="button" class="btn btn-outline-secondary my-2 my-sm-0 loginLinkButton"><a href="/sessions/new" class="loginLink">Log In</a></button>
     <% } %>
   </div>
 </nav>

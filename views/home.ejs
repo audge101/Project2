@@ -1,16 +1,35 @@
 <%- include('./partials/header.ejs') %>
 <%- include('./partials/nav.ejs') %>
 
-  <h1>Hello! This is the Recipes app</h1>
-  <div id="landingPageDiv">
-	  <div>
-	  	<div>
-			<p id="landing"><em>(And thanks for visiting our site)</em></p>
 
-			  <div>
-			    <img src="images/AdobeStock_272434508.jpeg" width="100%" id="landingPageImg">
-			  </div>
-		  </div>
-		</div>
-	</div>
-<%- include('./partials/footer.ejs') %>
+
+<% if (currentUser) { %>
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/AdobeStock_272434508.jpeg" class="d-block w-100 homeImage1" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/AdobeStock_262119365.jpeg" class="d-block w-100 homeImage2" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/AdobeStock_217548768.jpeg" class="d-block w-100 homeImage3" alt="..." >
+            </div>
+          </div>
+        </section>
+    <% } else if (!currentUser){ %>
+    	<section class="banner embed-responsive-item">
+        <video class="hidden-lg-down" autoplay="" loop="">
+            <source src="videos/AdobeStock_299051371_Video_HD_Preview.mov" type="video/webm">
+        </video>
+        <div id="landingHeader" class="float-left">WELCOME TO TASTI</div><br>
+        <div id="landingP" class="float-left">Food connects us.</div><br>
+        <a id ="landingID" class="btn btn-outline-light btn-lg" href="/users/new" role="button">Sign Up</a>
+      </section>
+    <% }  %>	
+    
+
+
+      
+
+  

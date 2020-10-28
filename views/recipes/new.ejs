@@ -1,19 +1,57 @@
 <%- include('../partials/header.ejs') %>
 <%- include('../partials/nav.ejs') %>
 
-        <h1>New Recipe page</h1>
-        <form action="/recipes" method="POST">
-            Recipe Title: <input type="text" name="title" /><br/>
-            Image URL: <input type="text" name="img1" /><br/>
-            Image URL: <input type="text" name="img2" /><br/>
-            Image URL: <input type="text" name="img3" /><br/>
-            Link URL: <input type="text" name="link1" /><br/>
-            Link URL: <input type="text" name="link2" /><br/>
-            Entry: <input type="text" name="recipeEntry" /><br/>
-            This recipe was in line with my health goals: <input type="checkbox" name="healthGoals" /><br/>
-            I'd like to submit this to the public feed: <input type="checkbox" name="submitPublicFeed" /><br/>
-            <input type="submit" name="" value="Create Recipe"/>
-        </form>
+        <h1 style="text-align: center; margin-top: 15px; margin-bottom: 30px">New Recipe page</h1>
+
+               <div class="card mx-auto" style="width: 40rem">
+                    <div class="card-body">
+                    <form action="/recipes" method="POST">
+                        <div class="form-group">
+                            <label for="title">Post Title</label>
+                            <input type="text" class="form-control" placeholder="required" name="title"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="imageURL">Image URL</label>
+                            <input type="text" class="form-control" name="img1"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="imageURL">Image URL</label>
+                            <input type="text" class="form-control" name="img2"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="imageURL">Image URL</label>
+                            <input type="text" class="form-control" name="img3"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkURL">Link URL</label>
+                            <input type="text" class="form-control" name="link1"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkURL">Link URL</label>
+                            <input type="text" class="form-control" name="link2"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="entry">Recipe/Post Entry</label>
+                            <textarea class="form-control" type="text" name="recipeEntry" id="exampleFormControlTextarea1" rows="4" placeholder="required"></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="healthGoals"/>
+                            <label class="healthGoalsLabel" for="goals">
+                            This recipe/meal was in line with my health goals
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="submitPublicFeed"/>
+                            <label class="publicFeedLabel" for="formCheckPublicFeed">
+                            I'd like to submit this post to the public feed.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" value="create recipe">Create Post</button>
+
+                    </form>
+                </div>
+            </div>
+        
 
 <%- include('../partials/footer.ejs') %>
 

@@ -1,25 +1,42 @@
 <%- include('../partials/header.ejs') %>
 <%- include('../partials/nav.ejs') %>
 
-        <h1>Recipes Show Page</h1>
-        <div class="recipeTitle"><%=recipe.title; %></div>
-        <div class="imageDiv"><img src="<%=recipe.img1; %>"></div>
-        <div class="imageDiv"><img src="<%=recipe.img2; %>"></div>
-        <div class="imageDiv"><img src="<%=recipe.img3; %>"></div>
-        <div class="linksDiv"><a href="<%=recipe.link1; %>">Recipe Link</a></div>
-        <div class="linksDiv"><a href="<%=recipe.link2; %>">Recipe Link</a></div>
-        <div class="recipeDescription"><%=recipe.recipeEntry; %></div>
-        <div class="checkboxValues">
-            <% if(recipe.healthGoals === true){ %>
-            This meal was in line with your health goals!
-        <% } %>
-            <% if(recipe.submitPublicFeed === true){ %>
-            You have chosen to submit this to the public feed.
-        <% } %>
-        <nav>
-            <a href="/recipes">Back to Recipe Index</a>
-        </nav>
+        <h1 style="text-align: center; margin-top: 15px; margin-bottom: 30px">Recipes Show Page</h1>
 
+        
+            <div class="card mx-auto" style="width: 50rem;"> 
+              <img src="<%=recipe.img1; %>" class="card-img-top">
+              <img src="<%=recipe.img2; %>" class="card-img-top">
+              <img src="<%=recipe.img3; %>" class="card-img-top">
+            <div class="card-header">
+                Links
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="<%=recipe.link1; %>"><%=recipe.link1; %></a></li>
+                <li class="list-group-item"><a href="<%=recipe.link2; %>"><%=recipe.link2; %></a></li>
+              </ul>
+            <div class="card-body">
+                <h4 class="card-title"><%=recipe.title; %></h4>
+                <p class="card-text"><%=recipe.recipeEntry; %></p>
+                <% if(recipe.healthGoals === true){ %>
+                <div>
+                    This meal was in line with your health goals!
+                    <% } %>
+                    <% if(recipe.submitPublicFeed === true){ %>
+                    You have chosen to submit this to the public feed.
+                    <% } %>
+                </div>
+              </div>
+            </div>
+
+          
+
+            <nav>
+                <a href="/recipes">Back to Recipe Index</a>
+            </nav>
+
+
+
+
+       
 <%- include('../partials/footer.ejs') %>
-
-

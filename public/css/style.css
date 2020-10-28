@@ -1,8 +1,3 @@
-
-.btn-pretty {
-	background-color: #DAAD86;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
@@ -10,10 +5,18 @@
 
 
 body {
-	background-color: #DAAD86;
+
+ 	background: -webkit-linear-gradient(#bfbfbd, #7e907a); /* For Safari 5.1 to 6.0 */
+ 	background: -o-linear-gradient(#bfbfbd, #7e907a); /* For Opera 11.1 to 12.0 */
+ 	background: -moz-linear-gradient(#bfbfbd, #7e907a); /* For Firefox 3.6 to 15 */
+ 	background: linear-gradient(#bfbfbd, #7e907a); /* Standard syntax */
+	background-size: 100%;
 	font-family: 'Lato', sans-serif;
 	color: ghostwhite;
+	background-attachment: fixed;
+  	background-position: center; 
 }
+
 
 p {
 	text-align: center;
@@ -21,11 +24,13 @@ p {
 
 h1 {
 	text-align: center;
-	font-size: 52px;
-	text-shadow: 2px;
-	font-family: 'Raleway', sans-serif;
-	margin-bottom: 0px;
-	text-shadow: .5px .5px 2px #407695;
+	font-size: 3.2em;
+	font-family: 'Raleway';
+	font-weight: bold;
+	padding-bottom: 10px;
+	background-color: rgba(125, 129, 123, .2);
+	color: ghostwhite;
+	text-shadow: 2px 2px 3px #407695;
 }
 
 button {
@@ -58,7 +63,78 @@ a {
 	color: #407695;
 }
 
-
-btn: hover {
-	background-color: #D3c4be;
+.indexEditLinks:hover {
+	color: white;
+	text-decoration: none;
 }
+
+.indexEditLinks {
+	color: gray;
+}
+
+video {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+#landingHeader {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#landingID {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+
+#landingP {
+  position: absolute;
+  top: 46%;
+  right: 10%;
+  font-size: 18px;
+}
+
+.card {
+	
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	margin: 5px;
+
+}
+
+.indexCard {
+	text-align: center;
+}
+
+.indexLinks:hover > a {
+	color: white !important
+}
+
+.loginLink:hover {
+	text-decoration: none !important;
+}
+
+.loginLinkButton:hover > a {
+	color: white !important;
+}
+.indexButtons {
+	padding-top: 10px;
+	display-content: flex;
+	justify-content: space-around;
+}
+
+.homeImage1, .homeImage2, .homeImage3 {
+	object-fit: cover;
+}
+
+label {
+	color: #3d4849;
+	text-align: left;
+}
+
+#eec8b5, #c6d2c8
+#cfd9d0, #4b5648
