@@ -5,11 +5,11 @@
 		 	<nav>
 		    	<a href="/recipes/new">Create a New Recipe</a>
 			</nav>
-			
+			<div class="pagePadding">
 				<div
 					<div class="card-deck">
 		            <% for(let i = 0; i < recipes.length; i++){ %>
-							<div class="card indexCard" style="width: 18rem">
+							<div class="card indexCard">
 								<img src="<%=recipes[i].img1; %>" class="card-img-top" alt="...">
 								<div class="card-body">
 							    <a href="/recipes/<%=recipes[i].id; %>"><h5 class="card-title" text-align="center">
@@ -30,7 +30,7 @@
 
 		            <% } %>
 		            </div>
-   				
+   				</div>
 <%- include('../partials/footer.ejs') %>
 
 

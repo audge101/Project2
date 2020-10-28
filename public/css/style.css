@@ -108,6 +108,9 @@ video {
 
 .indexCard {
 	text-align: center;
+	width: 18rem;
+	max-height: 30rem; 
+
 }
 
 .indexLinks:hover > a {
@@ -136,9 +139,10 @@ label, .showCard {
 	text-align: left;
 }
 
-input {
-	font: ariel;
+.pagePadding {
+	padding: 30px;
 }
+
 
 #eec8b5, #c6d2c8
 #cfd9d0, #4b5648
