@@ -110,11 +110,6 @@ video {
 	text-align: center;
 }
 
-.indexImage {
-	width: 18rem;
-	max-height: 20rem;
-	overflow: hidden;
-}
 
 .indexLinks:hover > a {
 	color: white !important
@@ -146,6 +141,13 @@ label, .showCard {
 	padding: 30px;
 }
 
+.card-img-top {
+	width: 90%
+	height: auto;
+}
 
-#eec8b5, #c6d2c8
-#cfd9d0, #4b5648
+@media screen and (min-width: 900px) {
+  .showCardTop {
+    width: 40rem !important;
+  }
+}
