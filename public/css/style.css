@@ -116,6 +116,7 @@ video {
 .indexImage {
 	width: 18 rem;
 	max-height: 20rem;
+	overflow: hidden;
 }
 
 .indexLinks:hover > a {
