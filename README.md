@@ -1,1 +1,17 @@
 # Project2
+##About This App
+Welcome to the Tasti app! This is a place to store and (eventually one day) share your love for food! You can create your own custom recipe post and add images (via image URLS) along with links and a personal blurb. Your post also prompts you to provide yourself feedback about whether your food-patterns align with your health goals. The ultimate goal for this app is to eventually create a place where people all over (or even just your friends) can share the most sacred and time-tested knowledge of all - food knowledge, to improve health and/or happiness in the long run. Food is the backbone of many households, communities, and cultures. It's time for an app that reflects that. Less selfies, more food!
+##Link to Application Hosted on Heroku
+https://project2-tasti.herokuapp.com
+
+###Technologies Used 
+This is a basic CRUD app utilizing the seven restful routes. This give the users the ability to create new content, post it, edit it, update it, delete it, and view it all together on an index page. It also utilizes sessions to provide an individualized user experience. Furthermore, because of the setup of the Schema and implementing that user's individualized ID in the create route we are able to individualize the experience further by allowing the user to be able to view only that content which they created within the routes as well as having that content be only viewed by them. Bootstrap is implemented throughout the application and was especially useful for the forms. Mongo and Mongoose allowed us to have databases and interact with them. Bcrypt allowed for hash encryption of passwords for added security. Atlas held our clusters in the cloud so that we could have a more dynamic db system. Custom CSS and linear gradients were added on top of that to indiviualize the site further. Of course, express make it all possible. Git and Github were used for version control and the app was ultimately deployed on Heroku.
+
+###Approach Taken
+Having a recipe app made the approach quite clear for creating the app. Recipes are definitely the kind of thing you might want to post, update, edit, view, and delete information about even if you aren't interacting with others on a feed or posting comments and such. I have tried to share recipe information a lot on the internet and found it quite frustrating, because you couldn't post images, a blurb, and simultaneously links to refer to other recipes that you like or a link to an Amazon product page of the food item you are currently excited about. It wasn't easy to have all this information stored in an organized way in one place.
+
+###Unsolved Problems
+Unsolved problems as it currently stands revolved mostly around CSS and Bootstrap in a way that made the site be mobile-friendly and appealing. I'd like to figure out a way to have just three cards in a row. This would seem straightforward, but upon implementing their technology to do that I got questionable results. Also uniform image sizing or even crop an image to fit certain specification, but then have it remain responsive when the screen-width is more narrow was another unsolved problem.
+
+###Notes
+I would like to include a feed, maybe profile images, expanded functionality for user accts (maybe more settings), perhaps the ability to upload a profile picture, along with the ability to upload photos directly from a device in the future.
