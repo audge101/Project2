@@ -12,7 +12,7 @@ const isAuthenticated = (req, res, next) =>  {
 	}
 }
 
-router.get('/new', (req, res) => {
+router.get('/new', isAuthenticated, (req, res) => {
 	res.render('recipes/new.ejs', { currentUser: req.session.currentUser })
 })
 
@@ -80,7 +80,7 @@ router.get('/:id', isAuthenticated, (req, res) => {
 })
 
 
-router.get('/:id/edit', (req, res) => { //isAuthenticated
+router.get('/:id/edit', isAuthenticated, (req, res) => { //isAuthenticated
   Recipe.findById(req.params.id, (err, foundRecipe) => {
     res.render('recipes/edit.ejs', {
       recipe: foundRecipe,
