@@ -9,7 +9,8 @@ const recipeSchema = new mongoose.Schema({
 	link2: String,
 	recipeEntry: { type: String, required: true},
 	healthGoals: Boolean,
-	submitPublicFeed: Boolean
+	submitPublicFeed: Boolean,
+	userID: String
 })
 
 

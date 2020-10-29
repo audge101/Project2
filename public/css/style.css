@@ -146,8 +146,30 @@ label, .showCard {
 	height: auto;
 }
 
+.userCard, .loginCard {
+	width: 27rem;
+}
+
+.newCard {
+	width: 40rem;
+}
+
+
 @media screen and (min-width: 900px) {
   .showCardTop {
     width: 40rem !important;
   }
+}
+
+
+@media screen and (max-width: 400px) {
+  .userCard, .loginCard, {
+  	width: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+	.newCard {
+		width: 90%;
+	}
 }

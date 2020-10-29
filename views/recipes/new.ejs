@@ -2,8 +2,8 @@
 <%- include('../partials/nav.ejs') %>
 
         <h1 style="text-align: center; margin-top: 15px; margin-bottom: 30px">New Recipe page</h1>
-
-               <div class="card mx-auto" style="width: 40rem">
+            <div id="newCardDiv">
+               <div class="card mx-auto newCard">
                     <div class="card-body">
                     <form action="/recipes" method="POST">
                         <div class="form-group">
@@ -51,6 +51,7 @@
                     </form>
                 </div>
             </div>
+        </div>
         
 
 <%- include('../partials/footer.ejs') %>

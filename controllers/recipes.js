@@ -5,7 +5,8 @@ const Recipe = require('../models/recipes.js')
 
 const isAuthenticated = (req, res, next) =>  {
 	if (req.session.currentUser) {
-		return next()
+		console.log(req.session.currentUser)
+    return next()
 	} else {
 		res.redirect('/sessions/new')
 	}
@@ -15,7 +16,7 @@ router.get('/new', (req, res) => {
 	res.render('recipes/new.ejs', { currentUser: req.session.currentUser })
 })
 
-router.post('/', (req, res) => {
+router.post('/', isAuthenticated, (req, res) => {
 	if (req.body.healthGoals === 'on') {
 		req.body.healthGoals = true
 	} else {
@@ -26,13 +27,17 @@ router.post('/', (req, res) => {
   } else {
     req.body.submitPublicFeed = false
   }
-	Recipe.create(req.body, (error, createdRecipe) => {
+  const bodyData = {
+    ... req.body, 
+    userID: req.session.currentUser._id
+  }
+	Recipe.create(bodyData, (error, createdRecipe) => {
 		res.redirect('/recipes')
 	})
 })
 
-router.get('/', (req, res)=>{
-    Recipe.find({}, (error, allRecipes)=>{
+router.get('/', isAuthenticated, (req, res)=>{
+    Recipe.find({userID: req.session.currentUser._id}, (error, allRecipes)=>{
         res.render('recipes/index.ejs', {
             recipes: allRecipes,
 						currentUser: req.session.currentUser
@@ -75,7 +80,7 @@ router.get('/:id', isAuthenticated, (req, res) => {
 })
 
 
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', (req, res) => { //isAuthenticated
   Recipe.findById(req.params.id, (err, foundRecipe) => {
     res.render('recipes/edit.ejs', {
       recipe: foundRecipe,
